@@ -1,0 +1,55 @@
+yolo_model_path: "models/pallet_front.pt"
+yolo_class_name: "pallet_front"
+confidence_threshold: 0.5
+
+depth_scale: 1000.0
+depth_min: 0.2
+depth_max: 8.0
+
+voxel_size: 0.03
+normal_radius_factor: 2.0
+fpfh_radius_factor: 5.0
+ransac_distance_threshold_factor: 1.5
+icp_max_correspondence_distance_factor: 1.5
+icp_method: "gicp"
+
+camera_intrinsics:
+  fx: 600.0
+  fy: 600.0
+  cx: 320.0
+  cy: 240.0
+
+extrinsic_T_B_C:
+  - [1.0, 0.0, 0.0, 0.0]
+  - [0.0, 1.0, 0.0, 0.0]
+  - [0.0, 0.0, 1.0, 0.0]
+  - [0.0, 0.0, 0.0, 1.0]
+
+template_point_cloud_path: "data/template_front.ply"
+template_fork_center: [0.0, 0.0, 0.0]
+template_insert_axis: [0.0, 1.0, 0.0]
+agv_forward_axis: "x"
+agv_lateral_axis: "y"
+
+target_selection:
+  enable_assist_label: true
+  enable_ocr: true
+  target_label: ""
+  fallback_strategy: "error"
+  label_match_mode: "exact"
+  min_detection_confidence: 0.25
+  ocr_languages: ["en"]
+  ocr_use_gpu: true
+  pillar_width: 100
+  pillar_height: 100
+  hole_width: 200
+  ocr_every_n_frames: 1
+  save_label_crops: false
+
+rgbd:
+  require_aligned_depth_to_color: true
+
+min_registration_fitness: 0.25
+max_registration_rmse_factor: 3.0
+min_fork_distance: 0.1
+max_fork_distance: 8.0

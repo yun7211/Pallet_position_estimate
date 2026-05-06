@@ -1,0 +1,10 @@
+-e .
+numpy>=1.23
+opencv-python>=4.7
+open3d>=0.17; python_version < "3.13"
+ultralytics>=8.0
+pyyaml>=6.0
+scipy>=1.10
+pytest>=7.0
+pyrealsense2; python_version < "3.13"
+easyocr; python_version < "3.13"

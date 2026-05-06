@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>pallet_pose_estimation</name>
+  <version>0.1.0</version>
+  <description>YOLO and FPFH-GICP pallet forkable-front pose estimation for ROS1 Noetic.</description>
+  <maintainer email="user@example.com">pallet_pose_estimation</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>cv_bridge</exec_depend>
+  <exec_depend>image_transport</exec_depend>
+  <exec_depend>message_filters</exec_depend>
+  <exec_depend>tf</exec_depend>
+  <exec_depend>tf2_ros</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>realsense2_camera</exec_depend>
+</package>

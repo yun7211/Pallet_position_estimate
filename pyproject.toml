@@ -1,0 +1,12 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pallet-pose-estimation"
+version = "0.1.0"
+description = "Offline pallet forkable-front pose estimation using YOLO and FPFH-GICP."
+requires-python = ">=3.10"
+
+[tool.setuptools.packages.find]
+where = ["src"]
